@@ -1,0 +1,28 @@
+{
+  "name": "@obh/workerd",
+  "version": "0.1.0",
+  "private": true,
+  "description": "obh-workerd: the qjobs worker. Claims and runs background jobs.",
+  "bin": {
+    "obh-workerd": "dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/main.js",
+    "migrate": "node dist/migrate.js",
+    "demo": "node dist/demo.js",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@obh/jobs": "workspace:*",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.11.6",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}

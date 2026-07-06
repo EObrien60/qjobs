@@ -1,0 +1,28 @@
+{
+  "name": "@obh/jobs",
+  "version": "0.1.0",
+  "description": "Boring Postgres-backed job queue + worker. Enqueue work, claim safely, run handler, retry, record result.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/migrations"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.11.6",
+    "pg": "^8.12.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5",
+    "zod": "^3.23.8"
+  }
+}
