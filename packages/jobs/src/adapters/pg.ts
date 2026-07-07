@@ -10,7 +10,7 @@ import type { JobDb, QueryResult, TransactionalJobDb } from "../db"
 type PgQueryable = {
   query(text: string, params?: any[]): Promise<{ rows: any[] }>
 }
-type PgClient = PgQueryable & { release: (err?: unknown) => void }
+type PgClient = PgQueryable & { release: () => void }
 type PgPool = PgQueryable & { connect: () => Promise<PgClient> }
 /* eslint-enable @typescript-eslint/no-explicit-any */
 

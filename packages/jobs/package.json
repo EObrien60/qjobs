@@ -1,6 +1,6 @@
 {
   "name": "@obh/jobs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Boring Postgres-backed job queue + worker. Enqueue work, claim safely, run handler, retry, record result.",
   "license": "MIT",
   "main": "dist/index.js",
